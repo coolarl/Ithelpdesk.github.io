@@ -64,7 +64,6 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | IT Helpdesk</title>
     <!-- icon cmnp -->
-    <link rel="icon" href="../assets/dist/img/cmnp.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap4/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -78,12 +77,12 @@ if (isset($_POST['login'])) {
     <div class="container">
         <div class="row content">
             <div class="col-md-6 mb-3">
-               <img src="../../assets/dist/img/laogo-removebg-preview.png" width="300" height="300">
+               <img src="../assets/img/rererere-removebg-preview.png" width="300" height="300">
                 <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by vectorjuice - www.freepik.com</a> -->
             </div>
             <div class="col-md-6">
                 <a class="btn logo" href="../index.php">IT Helpdesk</a>
-                <img src="../../assets/dist/img/laogo-removebg-preview.png" width="50" height="50">
+                <img src="../assets/img/newagain.png" width="50" height="50">
                 <p class="lead">Divisi TI</p>
                 <h4 class="signin-text mb-3">Sign In</h4>
                 <form action="" method="post">

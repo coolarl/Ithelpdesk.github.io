@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2024 at 09:40 AM
+-- Generation Time: Jan 17, 2024 at 12:08 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,10 +39,24 @@ CREATE TABLE `divisi` (
 
 INSERT INTO `divisi` (`id`, `kodedivisi`, `divisi`) VALUES
 (1, 'TI', 'Teknologi Informasi'),
-(2, 'PP', 'Pelayanan dan Pemeliharaan'),
 (3, 'SPI', 'Satuan Pengawasan Intern'),
 (8, 'KEU', 'Keuangan'),
 (10, 'SEKPER', 'Sekretaris Perusahaan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `h_user`
+--
+
+CREATE TABLE `h_user` (
+  `user_id` varchar(16) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `Role` varchar(30) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -87,7 +101,7 @@ CREATE TABLE `komponen` (
 
 INSERT INTO `komponen` (`idkomponen`, `idkategori`, `idmerk`, `tipe`, `spesifikasi`, `keterangan`, `hdd`, `ram`, `stats`) VALUES
 (1, 1, 1, 'X453MA', 'Intel Celeron', 'Ready', '2tb', '8GB', 'AKTIF'),
-(4, 2, 2, 'Nitro 5', 'Ryzen 7 RTX3060', 'Acer Nitro 5 AN51545', 'SSD 2 TB', '32 RAM', 'AKTIF');
+(5, 2, 1, 'A1G34', 'i9', 'ready', '1tb', '16GB', 'AKTIF');
 
 -- --------------------------------------------------------
 
@@ -105,8 +119,7 @@ CREATE TABLE `merk` (
 --
 
 INSERT INTO `merk` (`idmerk`, `namamerk`) VALUES
-(1, 'ASUS'),
-(2, 'ACER');
+(1, 'ASUS');
 
 -- --------------------------------------------------------
 
@@ -130,19 +143,8 @@ CREATE TABLE `pc` (
 --
 
 INSERT INTO `pc` (`idpc`, `idpengguna`, `namapc`, `usrlogin`, `ipaddress`, `internet`, `catatan`, `is_delete`) VALUES
-(1, 5, 'ASUS', '', '192.168.100.1', 'TIDAK', '', 1),
-(2, 8, 'ini offce', '', '192.168.100.1', 'TIDAK', 'kdjksfs', 0),
-(3, 8, 'ini offce 2', '', '192.168.100.2', 'YA', '', 1),
-(4, 10, 'fsddsf', '', 'DSFFDS', 'TIDAK', '', 1),
-(5, 8, 'fds', '', 'dfs', 'TIDAK', '', 1),
-(6, 13, 'ds', '', 'dsf', 'TIDAK', '', 1),
-(7, 13, 'ds', '', 'dsf', 'TIDAK', '', 1),
-(8, 7, 'TES', '', '83247832', 'TIDAK', '', 1),
-(9, 7, 'TES', '', '83247832', 'TIDAK', '', 1),
-(10, 7, 'dsfdfs', '', '3434', 'TIDAK', '', 1),
-(11, 7, 'sadasd34', '', '32432423', 'TIDAK', '', 1),
-(12, 5, 'ACER NITRO 5', '', '192.168.1.1', 'YA', '', 1),
-(13, 5, 'ACER NITRO 5', '', '192.168.1.1', 'YA', '', 0);
+(20, 8, 'ty-yt', '', '43.5', 'YA', '', 0),
+(21, 8, 'ty-123', '', '43.5', 'YA', '', 0);
 
 -- --------------------------------------------------------
 
@@ -167,7 +169,7 @@ CREATE TABLE `pengaduan` (
 --
 
 INSERT INTO `pengaduan` (`id`, `n_pelapor`, `j_pelapor`, `d_pelapor`, `n_barang`, `ket`, `status`, `ket_petugas`, `tgl_lapor`) VALUES
-('SNMC-0001', 'arul', 'STAFF', 'Keuangan', 'PC rusak', 'rusak', 'Sedang diajukan', '-', '2024-01-08');
+('SNMC-0001', 'arul', 'STAFF', 'Keuangan', 'PC rusak', 'rusak', 'Selesai diproses', 'mantap', '2024-01-08');
 
 -- --------------------------------------------------------
 
@@ -188,12 +190,11 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`idkary`, `nama`, `jabatan`, `unitkerja`, `statkary`) VALUES
-(5, 'hamas', 'DIREKSI-KOMISARIS', '1', 'AKTIF'),
+(5, 'Rudi', 'DIREKSI-KOMISARIS', '1', 'AKTIF'),
 (7, 'yudha', 'DIREKSI-KOMISARIS', '8', 'AKTIF'),
 (8, 'defano', 'STAFF', '8', 'AKTIF'),
 (10, 'dapa', 'MANAGER', '8', 'AKTIF'),
-(12, 'bahrul', 'ASSISTEN MANAGER', '8', 'AKTIF'),
-(13, 'aldy', 'ASSISTEN MANAGER', '2', 'TIDAK AKTIF');
+(14, 'ronaldo', 'ASSISTEN MANAGER', '3', 'AKTIF');
 
 -- --------------------------------------------------------
 
@@ -214,11 +215,8 @@ CREATE TABLE `rakitan` (
 --
 
 INSERT INTO `rakitan` (`idrakitan`, `idpc`, `idkomponen`, `barcode`, `jumlah`) VALUES
-(67, 1, 1, '3243432324', ''),
-(68, 2, 1, '3243432324', ''),
-(69, 9, 1, 'dsffdg', ''),
-(70, 11, 1, 'dsfgdfsgs', ''),
-(71, 13, 4, 'dfslkdsfl', '');
+(78, 20, 1, '', '1'),
+(79, 21, 5, '', '1');
 
 -- --------------------------------------------------------
 
@@ -244,7 +242,62 @@ INSERT INTO `user` (`user_id`, `username`, `password`, `Role`, `img`, `status`) 
 ('34354545', 'dendi', '$2y$10$4/SmNLHHFSxATkVGt6V.QuqF7At3Nl3UUd7y5MdXC1DTyVTQzFPyO', 'karyawan', 'default.jpg', 1),
 ('389483948398', 'tes', '$2y$10$5sR1bajWP5xOa2asFxjxY.vUS1c744TA9yavAeSvZz9RM27tbrU3m', 'karyawan', 'default.jpg', 1),
 ('e34435454', 'yoga', '$2y$10$oycGO9cZTfAzK41VQvZfieHBd7AHzBjQhZAdZku3ra1yMg.P3MoDS', 'karyawan', '1401516792_hayu.jpg', 1),
-('M0701001', 'admin', '$2y$10$tFkLOG2KPaOL0Wpa5h4U7us1AIMGJnVSsAgR3Kkl0xNu9URjDCfT.', 'Administrator', '1860166598_bjb.jpg', 1);
+('M0701001', 'admin', '$2y$10$tFkLOG2KPaOL0Wpa5h4U7us1AIMGJnVSsAgR3Kkl0xNu9URjDCfT.', 'Administrator', '816575042_307632272_3170286679860499_7013164238378598201_n.jpg', 1);
+
+--
+-- Triggers `user`
+--
+DELIMITER $$
+CREATE TRIGGER `trg_insert_histori_user` AFTER INSERT ON `user` FOR EACH ROW BEGIN
+	
+	INSERT INTO `h_user`
+	(
+		`user_id`, 
+		`username`, 
+		`password`, 
+		`Role`, 
+		`img`, 
+		`status`
+	)
+	VALUES
+	(
+		NEW.`user_id`, 
+		NEW.`username`, 
+		NEW.`password`, 
+		NEW.`Role`, 
+		NEW.`img`, 
+		NEW.`status`
+	);
+
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_user_activity`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_user_activity` (
+`sedang_diajukan` bigint(21)
+,`sedang_diproses` bigint(21)
+,`selesai_diproses` bigint(21)
+,`total_laporan` bigint(21)
+,`jumlah_karyawan` bigint(21)
+,`jumlah_hardware` bigint(21)
+,`jumlah_software` bigint(21)
+,`jumlah_network` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_user_activity`
+--
+DROP TABLE IF EXISTS `vw_user_activity`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_user_activity`  AS SELECT (select count(`pengaduan`.`id`) from `pengaduan` where `pengaduan`.`status` = 'Sedang Diajukan') AS `sedang_diajukan`, (select count(`pengaduan`.`id`) from `pengaduan` where `pengaduan`.`status` = 'Sedang Diproses') AS `sedang_diproses`, (select count(`pengaduan`.`id`) from `pengaduan` where `pengaduan`.`status` = 'Selesai Diproses') AS `selesai_diproses`, (select count(`pengaduan`.`id`) from `pengaduan`) AS `total_laporan`, (select count(`pengguna`.`idkary`) from `pengguna`) AS `jumlah_karyawan`, (select count(`kategori`.`idkategori`) from `kategori`) AS `jumlah_hardware`, (select count(`merk`.`idmerk`) from `merk`) AS `jumlah_software`, (select count(`komponen`.`idkomponen`) from `komponen`) AS `jumlah_network` ;
 
 --
 -- Indexes for dumped tables
@@ -255,6 +308,12 @@ INSERT INTO `user` (`user_id`, `username`, `password`, `Role`, `img`, `status`) 
 --
 ALTER TABLE `divisi`
   ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
+-- Indexes for table `h_user`
+--
+ALTER TABLE `h_user`
+  ADD PRIMARY KEY (`user_id`) USING BTREE;
 
 --
 -- Indexes for table `kategori`
@@ -329,7 +388,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `komponen`
 --
 ALTER TABLE `komponen`
-  MODIFY `idkomponen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idkomponen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `merk`
@@ -341,19 +400,19 @@ ALTER TABLE `merk`
 -- AUTO_INCREMENT for table `pc`
 --
 ALTER TABLE `pc`
-  MODIFY `idpc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idpc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `idkary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idkary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `rakitan`
 --
 ALTER TABLE `rakitan`
-  MODIFY `idrakitan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `idrakitan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- Constraints for dumped tables

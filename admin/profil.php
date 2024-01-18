@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
                 <button type="submit" name="submit" class="btn btn-primary mb-3"><span class="fas fa-upload mr-2"></span>Upload</button>
               </form>
             </div>
-            <img src="../assets/img/profile/<?= $data['img']; ?>" alt="user image" width="200" height="200" style="border: 1px;">
+            <img src="../assets/img/profile/<?= $data['img']; ?>" alt="user image" width="200" height="200" style="border: 1px solid black;border-radius: 2%;">
           </div>
         </div>
       </div>

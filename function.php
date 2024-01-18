@@ -282,7 +282,7 @@ function deleteDatapc($id_pc = null)
     global $conn;
 
     if ($id_pc != null) {
-        $query = "UPDATE pc SET is_delete = '1' WHERE idpc='$id_pc'";
+        $query = "DELETE FROM pc WHERE idpc='$id_pc'";
         $result = mysqli_query($conn, $query);
         return $result;
     }

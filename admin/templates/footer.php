@@ -3,7 +3,7 @@
     <div class="float-right d-none d-sm-block">
       <b>VersionME</b>
     </div>
-    <strong>Copyright by cirul</a>.</strong> All rights reserved.
+    <strong>Created <img width="20" height="20" src="https://img.icons8.com/external-kosonicon-flat-kosonicon/64/external-healthy-care-covid19-coronavirus-kosonicon-flat-kosonicon.png" alt="external-healthy-care-covid19-coronavirus-kosonicon-flat-kosonicon"/> by SHU.</strong> All rights reserved. 
   </footer>
 
   <!-- Control Sidebar -->

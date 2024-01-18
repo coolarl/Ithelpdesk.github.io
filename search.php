@@ -33,15 +33,48 @@ $keluhanStatus = new KeluhanStatus($conn);
         if ($data) {
             foreach ($data as $d) :
         ?>
-                <p>Nomor Laporan : <?= $d['id']; ?></p>
-                <p>Tanggal Lapor : <?= $d['tgl_lapor']; ?></p>
-                <p>Nama Pelapor : <?= $d['n_pelapor']; ?></p>
-                <p>Jabatan : <?= $d['j_pelapor']; ?></p>
-                <p>Unit Kerja : <?= $d['d_pelapor']; ?></p>
-                <p>Kendala : <?= $d['n_barang']; ?></p>
-                <p>Keterangan : <?= $d['ket']; ?></p>
-                <p>Status : <?= $d['status']; ?></p>
-                <p><b><u>Catatan dari IT Helpdesk</u></b> <br><?= $d['ket_petugas']; ?></p>
+             <div class="table-responsive">
+                <table  class="table table-bordered" style="width: 600px;" >
+                    <tr>
+                        <th>Nomor Laporan</th>
+                        <td><?= $d['id']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Lapor</th>
+                        <td><?= $d['tgl_lapor']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nama Pelapor</th>
+                        <td><?= $d['n_pelapor']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Jabatan</th>
+                        <td><?= $d['j_pelapor']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Unit Kerja</th>
+                        <td><?= $d['d_pelapor']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Kendala</th>
+                        <td><?= $d['n_barang']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Keterangan</th>
+                        <td><?= $d['ket']; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td><?= $d['status']; ?></td>
+                    </tr>
+                   
+
+                    <tr>
+                        <th><b><u>Catatan dari IT Helpdesk</u></b></th>
+                        <td><?= $d['ket_petugas']; ?></td>
+                    </tr>
+                </table>
+                </div>
                 <br>
                 <a href="index.php" class="btn btn-sm btn-primary" style="width: 80px;"><span class="fas fa-arrow-left mr-2"></span>Back</a>
         <?php

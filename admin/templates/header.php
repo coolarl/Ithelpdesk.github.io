@@ -13,7 +13,6 @@ include '../function.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IT Helpdesk</title>
-  <link rel="icon" href="../assets/dist/img/cmnp.png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -85,12 +84,13 @@ include '../function.php';
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index.php" class="brand-link">
-        <img src="../../assets/dist/img/laogo-removebg-preview.png" alt="IT Helpdesk" class="brand-image elevation-3" style="opacity: .8">
+        <img src="../../assets/img/newagain.png" alt="IT Helpdesk" class="brand-image elevation-3" style="filter: drop-shadow(0px 0px 0px white);opacity: .8" >
         <span class="brand-text font-weight-light" style="font-size: 19px;">IT Helpdesk</span>
       </a>
       <style>
         .main-sidebar {
-          background-color: rebeccapurple !important
+          background-color: rgb(95, 99, 109) ;
+          color:#c2c7d0;
         }
       </style>
       <!-- Sidebar -->
@@ -108,4 +108,6 @@ include '../function.php';
             <a class="d-block" style="cursor: default; margin-top:-12px;"><?= $_SESSION["login"]["Role"] ?></a>
             <a class="d-block" style="cursor: default;"><?= $_SESSION["login"]["user_id"] ?></a>
           </div>
+
+         
         </div>

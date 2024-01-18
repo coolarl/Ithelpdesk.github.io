@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | IT Helpdesk</title>
     <!-- icon cmnp -->
-    <link rel="icon" href="../assets/dist/img/cmnp.png">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap4/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -32,11 +32,11 @@ if (isset($_POST['register'])) {
     <div class="container">
         <div class="row content">
             <div class="col-md-6 mb-3">
-             <img src="../../assets/dist/img/laogo-removebg-preview.png" width="300" height="300">
+             <img src="../../assets/img/rererere-removebg-preview.png" width="300" height="300">
             </div>
             <div class="col-md-6" style="margin-top: -30px;">
                 <a class="btn logo" href="../index.php">IT Helpdesk</a>
-                <img src="../../assets/dist/img/laogo-removebg-preview.png" width="50" height="50">
+                <img src="../../assets/img/newagain.png"  width="50" height="50">
                 <p class="lead">Divisi TI</p>
                 <h4 class="signin-text mb-3">Sign Up</h4>
                 <form action="" method="POST">

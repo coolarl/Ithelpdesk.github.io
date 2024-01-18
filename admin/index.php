@@ -134,7 +134,7 @@ $viewkomponen = mysqli_fetch_array($komponen);
             <div class="info-box">
              <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons.png" alt="external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons"/>
               <div class="info-box-content">
-                <center><span class="info-box-text">Hardware</span></center>
+                <center><span class="info-box-text">Kategori</span></center>
                 <span class="info-box-number">
                 <center><?php echo $viewkategori['kategori']; ?></center>
                   
@@ -146,7 +146,7 @@ $viewkomponen = mysqli_fetch_array($komponen);
             <div class="info-box">
              <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons.png" alt="external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons"/>
               <div class="info-box-content">
-                <center><span class="info-box-text">Software</span></center>
+                <center><span class="info-box-text">Merk</span></center>
                 <span class="info-box-number">
                 <center><?php echo $viewmerk['merk']; ?></center>
                 </span>
@@ -157,7 +157,7 @@ $viewkomponen = mysqli_fetch_array($komponen);
             <div class="info-box">
              <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons.png" alt="external-setting-computer-programming-icons-flaticons-lineal-color-flat-icons"/>
               <div class="info-box-content">
-                <center><span class="info-box-text">Network</span></center>
+                <center><span class="info-box-text">Komponen</span></center>
                 <span class="info-box-number">
                  <center><?php echo $viewkomponen['komponen']; ?></center> 
                 </span>

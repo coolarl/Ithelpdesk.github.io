@@ -165,7 +165,7 @@ WHERE rakitan.idpc = '$id_pc'");
                                         <th>Barcode</th>
                                         <th>Jumlah</th>
                                         <!-- <th>Komponen</th> -->
-                                        <th> <button type="button" id="add" name="add" class="btn btn-sm btn-outline-primary add"><i class="fa fa-plus"></i> Add Data</button></th>
+             
                                     </tr>
                                 </thead>
                                 <tbody>

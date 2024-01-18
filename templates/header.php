@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT HELPDESK</title>
   <!-- icon cmnp -->
-  <link rel="icon" href="assets/dist/img/cmnp.png">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/plugins/bootstrap4/css/bootstrap.min.css">
   <!-- Custom CSS -->
@@ -20,7 +19,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <img class="logo" src="assets/dist/img/laogo-removebg-preview.png">
+      <img class="logo" src="../assets/img/newagain.png">
       <a class="navbar-brand" href="index.php" >IT HELPDESK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,13 +43,11 @@
   <!-- header -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <img id="ph" src="assets/img/smart.png">
+      <img id="ph" src="assets/img/rererere-removebg-preview.png">
       <style>
         #ph {
-          width: 400px;
-          height: 200px;
-          margin-top: 150px;
-          margin-left: 85px;
+          width: 500px;
+          height: 500px;
         }
       </style>
       <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by vectorjuice - www.freepik.com</a> -->
